@@ -227,7 +227,7 @@ col1, col2 = st.columns(2)
 with col1:
     income_mo = st.number_input("Monthly Rental Income ($)", min_value=0.0, value=2_000.0, step=50.0)
     fees_mo = st.number_input("Monthly Fees (HOA, etc.) ($)", min_value=0.0, value=0.0, step=10.0)
-    profit_pct = st.number_input("Annual rent profit percentage", min_value=0.0, max_value=100.0, value=5.0, step=0.5)
+    profit_pct = st.number_input("Annual Rent Profit Percentage", min_value=0.0, max_value=100.0, value=5.0, step=0.5)
 with col2:
     management_pct = st.number_input("Property Management (% of annual income)", min_value=0.0, max_value=100.0, value=8.0, step=0.5)
     insurance_yr = st.number_input("Annual Insurance ($)", min_value=0.0, value=1_200.0, step=100.0)
