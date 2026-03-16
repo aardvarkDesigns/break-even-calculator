@@ -181,6 +181,14 @@ hr {
     font-size: 42px;
     font-weight: 700;
     letter-spacing: -1px;
+    margin-bottom: 4px;
+}
+.kw-result-sub {
+    font-size: 14px;
+    font-weight: 400;
+    opacity: 0.80;
+    margin-top: 6px;
+    letter-spacing: 0.5px;
 }
 
 /* Breakdown rows */
@@ -258,23 +266,25 @@ if st.button("Calculate Break-Even Price", type="primary", use_container_width=T
             insurance_yr=insurance_yr,
             management_pct=management_pct,
         )
+        payment_mo = calculate_payment(
+            result, renovation_cost, down_payment_pct, loan_term_yrs, interest_rate_pct
+        )
         st.markdown(f"""
 <div class="kw-result">
   <p class="kw-result-label">Break-Even Purchase Price</p>
   <p class="kw-result-price">${result:,.0f}</p>
+  <p class="kw-result-sub">Monthly Debt Service: ${payment_mo:,}</p>
 </div>
 """, unsafe_allow_html=True)
 
         # ── Cost breakdown ────────────────────────────────────────────────────
         with st.expander("See annual cost breakdown"):
             income_yr = income_mo * 12
-            payment_mo = calculate_payment(
-                result, renovation_cost, down_payment_pct, loan_term_yrs, interest_rate_pct
-            )
             total_project_cost = result + renovation_cost
             rows = {
                 "Gross Annual Income": income_yr,
-                "Mortgage Payments": payment_mo * 12,
+                "Monthly Debt Service": payment_mo,
+                "Annual Debt Service": payment_mo * 12,
                 "Annual Fees": fees_mo * 12,
                 "Target Profit": profit_pct / 100 * income_yr,
                 "Property Management": management_pct / 100 * income_yr,
