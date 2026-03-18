@@ -306,6 +306,12 @@ if st.button("Calculate Break-Even Price", type="primary", use_container_width=T
 st.markdown("""
 <div style="margin-top: 48px; padding-top: 16px; border-top: 1px solid #dde3ff;
             text-align: center; font-size: 12px; color: #444; font-weight: 400;">
+    <p style="margin-bottom: 8px;">
+        <a href="https://www.lasvegasrealestateinvestmentgroup.com/limitationOfLiability.html"
+           target="_blank" style="color: #2557FF; text-decoration: underline;">
+            License and Disclaimer: By choosing to use this tool and or information, you are agreeing to the terms on the license page.
+        </a>
+    </p>
     &copy; 2005 to 2026 Cleo Li and Eric Fernwood, all rights reserved.
 </div>
 """, unsafe_allow_html=True)
