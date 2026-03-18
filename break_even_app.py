@@ -307,7 +307,7 @@ st.markdown("""
 <div style="margin-top: 48px; padding-top: 16px; border-top: 1px solid #dde3ff;
             text-align: center; font-size: 12px; color: #444; font-weight: 400;">
     <p style="margin-bottom: 8px;">
-        <a href="https://www.lasvegasrealestateinvestmentgroup.com/limitationOfLiability.html"
+        <a href="https://fernwood.team/policies-fees-license-and-disclaimer/"
            target="_blank" style="color: #2557FF; text-decoration: underline;">
             License and Disclaimer: By choosing to use this tool and or information, you are agreeing to the terms on the license page.
         </a>
